@@ -1,5 +1,9 @@
 import tweepy
 import json
+from itertools import islice
+
+# global config options
+max_tweets = 10  #tweepy max = 100
 
 # First, set up authorization, using the secrets in auth.secrets
 
@@ -9,6 +13,11 @@ auth.set_access_token(secrets['access_token'],secrets['access_secret'])
 
 api = tweepy.API(auth)
 
-public_tweets = api.home_timeline()
-for tweet in public_tweets:
+# load first $maxtweets from file
+with open("twitter_ids.txt") as id_file:
+    ids = list(islice(id_file.read().splitlines(), max_tweets))
+
+specific_tweets = api.statuses_lookup(ids, True)
+
+for tweet in specific_tweets:
         print (tweet.text)
