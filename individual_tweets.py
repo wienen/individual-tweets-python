@@ -1,9 +1,10 @@
 import tweepy
 import json
+from pprint import pprint
 from itertools import islice
 
 # global config options
-max_tweets = 10  #tweepy max = 100
+max_tweets = 1  #tweepy max = 100
 
 # First, set up authorization, using the secrets in auth.secrets
 
@@ -20,4 +21,5 @@ with open("twitter_ids.txt") as id_file:
 specific_tweets = api.statuses_lookup(ids, True)
 
 for tweet in specific_tweets:
-        print (tweet.text)
+    pp = tweet._json
+    pprint (pp)
