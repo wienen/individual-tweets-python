@@ -1,4 +1,7 @@
 auth.secrets
 twitter_ids.txt
+ids_from_csv.py
 
 *.swp
+
+testfiles/*
