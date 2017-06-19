@@ -5,3 +5,4 @@ ids_from_csv.py
 *.swp
 
 testfiles/*
+tmp/*

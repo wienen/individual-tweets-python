@@ -12,7 +12,7 @@ max_iterations = 1
 
 secrets = json.load(open('auth.secrets'))
 auth = tweepy.OAuthHandler(secrets['consumer_key'], secrets['consumer_secret'])
-auth.set_access_token(secrets['access_token'],secrets['access_secret'])
+auth.set_access_token(secrets['access_token'], secrets['access_secret'])
 
 api = tweepy.API(auth)
 
