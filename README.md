@@ -37,5 +37,5 @@ The file `./ids_from_tweets.py` will extract the ids and print them to the comma
 1. Do not use the command line as an intermediate step
 1. Create a module for this
 1. Add incident id to the information in the list of tweets so that the tweet can be linked to a single incident
-Note: the actual tweet information cannot be part of the database as this is confidential information
+Note: the actual incident information cannot be part of the database as this is confidential information
 1. Add all to heroku
