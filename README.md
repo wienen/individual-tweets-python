@@ -31,3 +31,11 @@ GetOldTweets command line generator `../../TweetHistory/get_dates.py`.  This wil
 (not all tweets, still need to assess % of tweets returned) and store them in csv files.
 The file `./ids_from_tweets.py` will extract the ids and print them to the command line, as in
 `twitter_ids.txt`. These ids can then be processed by `download_tweets.py`.
+
+## Opportunities for improvement
+1. Add stuff in TweetHistory to the module in this directory
+1. Do not use the command line as an intermediate step
+1. Create a module for this
+1. Add incident id to the information in the list of tweets so that the tweet can be linked to a single incident
+Note: the actual tweet information cannot be part of the database as this is confidential information
+1. Add all to heroku
